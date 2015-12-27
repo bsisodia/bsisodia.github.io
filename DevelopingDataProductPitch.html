@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Risk Prediction</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Health Risk Prediction">
+  <meta name="author" content="BS">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Health Risk Prediction</h1>
+    <h2>Shiny App for Developing Data Products class project</h2>
+    <p>BS<br/>Data Science Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Health Risk Prediction - Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Health Risk Prediction is a very challenging and widely used problem.</li>
+<li>Insurance companies to employment screening companies are using it.</li>
+<li>It is very difficult to do true prediction due to complex nature of problem.</li>
+<li>If there is an application which can do this prediction reliably then it would help not only those companies but also to individuals so that they can change their lifestyle and live healthy longer</li>
+<li>This app is just a beginning of complex solution. There is more work needs to be done.
+<img src="HEALTH-RISK.jpg" alt="width"></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Health Risk Prediction - Input Parameters</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We are using following input parameters:</p>
+
+<ol>
+<li>Weight: It should be entered in pounds. It impacts BMI.</li>
+<li>Height: It should be entered in inches. It impacts BMI.</li>
+<li>Existing pre-conditions: These conditions directly impacts health and increases risks.</li>
+<li>Date of birth: It is used to calculate age of individuals. With Age, risk increases.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Health Risk Prediction - Logic</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application is using following logic:</p>
+
+<ol>
+<li>Use weight &amp; height to compute BMI - \(weight/height^2*703\)</li>
+<li>BMI in 25-30 indicates &#39;OverWeight&#39; and hence risk score of 0.4</li>
+<li>BMI &gt;30 indicates &#39;Obesity&#39; and hence risk score of 0.6</li>
+<li>Each Pre-conditions adds risk to health and so additional score of 0.1</li>
+<li>Age is a factor on health risk. Age of 50-65: Risk of 0.1, Age 65-75: Risk of 0.15 and Age &gt; 75- risk of 0.2</li>
+</ol>
+
+<p>Sample <strong>Risk</strong> for:
+Weight=200 lbs, Height=60 Inches, Existing Conditions=Diabotic &amp; Thyroid, Date of Birth=1950-01-01</p>
+
+<pre><code>## [1] 0.9
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Health Risk Prediction - Next Steps</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application is having a simple calculation but it can be extended to include complex and better prediction model. Here are some enhancements which can be done:</p>
+
+<ol>
+<li>Add more variables like gender, race, other health parameters (smoking, exercise, etc.)</li>
+<li>Add better prediction logic then simple calculations. </li>
+<li>Use a sample data for building model and testing it.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Health Risk Prediction - Problem'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Health Risk Prediction - Input Parameters'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Health Risk Prediction - Logic'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Health Risk Prediction - Next Steps'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
